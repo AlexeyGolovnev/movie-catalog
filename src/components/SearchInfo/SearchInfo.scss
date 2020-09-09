@@ -1,0 +1,17 @@
+.search-info {
+  font-size: 20px;
+  background-color: #fff;
+  @media screen and(max-width: 550px) {
+   font-size: 16px;
+  }
+
+  &__inner {
+    padding: 10px 0;
+    border-top: 1px solid #4986cc;
+  }
+
+  .search-info__text > span {
+    color: #4986cc;
+  }
+
+}
