@@ -11,7 +11,7 @@ function SearchBox(props) {
                type='text'
                name="search"
                placeholder='Enter query'/>
-    );
+    )
 }
 
 export default SearchBox;

@@ -15,23 +15,16 @@ function Pagination(props) {
         <nav className='pagination'>
             <ul className='pagination__list'>
                 {pageNumbers.map(number => {
-                    if (number === props.currentPage) {
-                        return (
-                            <li key={number} className='pagination__item'>
-                                <a onClick={changeCurrentPage} href="#" className='pagination__link current'>
-                                    {number}
-                                </a>
-                            </li>
-                        )
-                    } else {
-                        return (
-                            <li key={number} className='pagination__item'>
-                                <a onClick={changeCurrentPage} href="#" className='pagination__link'>
-                                    {number}
-                                </a>
-                            </li>
-                        )
-                    }
+                    return (
+                        <li key={number} className='pagination__item'>
+                            <a onClick={changeCurrentPage}
+                               href="#"
+                               className={number === props.currentPage ? 'pagination__link current':'pagination__link'}
+                            >
+                                {number}
+                            </a>
+                        </li>
+                    )
                 })}
             </ul>
         </nav>

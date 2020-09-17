@@ -5,9 +5,9 @@ import Pagination from "../Pagination/Pagination";
 
 
 function Content(props) {
-    let arrItems = [];
+    let items = [];
     if (props.movies) {
-        arrItems = props.movies.map(item => {
+        items = props.movies.map(item => {
             return (
                 <ContentItem
                     key={item.imdbID}
@@ -24,13 +24,13 @@ function Content(props) {
         <div className='content'>
             <div className="container">
                 <div className="content__inner">
-                    {arrItems}
+                    {items}
                 </div>
             </div>
-            <Pagination totalMovies = {props.totalMovies}
-                        moviesPerPage = {props.moviesPerPage}
-                        currentPage = {props.currentPage}
-                        setCurrentPage = {props.setCurrentPage}
+            <Pagination totalMovies={props.totalMovies}
+                        moviesPerPage={props.moviesPerPage}
+                        currentPage={props.currentPage}
+                        setCurrentPage={props.setCurrentPage}
             />
         </div>
     );

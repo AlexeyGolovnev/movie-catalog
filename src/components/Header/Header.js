@@ -4,7 +4,7 @@ import userImg from './../../user.svg';
 import SearchBox from "./SearchBox/SearchBox";
 
 
-function Header(props) {
+function Header (props) {
     return (
       <header className='header'>
         <div className="container">
